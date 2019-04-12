@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Teacher Accounts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form action="/admin/teacherdetails" method="POST">
+<div class="container">
+  <h2>Teacher Update Center</h2>
+  <p>Teacher Accounts Are:</p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th>NO</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>Password</th>
+        <th>Edit/Delete</th>
+      
+      </tr>
+    </thead>
+    <tbody> <% for(var i=0; i < info.length; i++) { %>
+      <tr>
+          <td># <%= (i+1) %></td>
+          <td><%= info[i].tid %></td>
+           <td><%= info[i].tname %></td>
+           <td><%= info[i].tpass %></td>
+
+
+
+           <td>
+              <a class="btn btn-xs btn-warning btn-edit" href="/admin/teacher/edit/<%=info[i]._id %>">Update</a>
+  
+              <a class="btn btn-xs btn-danger btn-delete" href="/admin/teacher/delete/<%=info[i]._id %>">Delete</a>
+  
+            </td>
+
+
+      </tr>
+  <% } %>
+     
+    </tbody>
+  </table>
+</div>
+</form>
+</body>
+</html>

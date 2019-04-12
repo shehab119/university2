@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Admin</title>
+ 
+    <style type="text/css">
+    #can{
+      text-align:right;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body">
+            <h3 class="text-center">Admin Login</h3>
+            <form action="/admin/login" method="post">
+              <div class="form-group">
+                <label for="email">Username</label>
+                <input type="text" name="username" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" required>
+              </div>
+              <button type="submit" class="btn btn-success">Login</button>
+            </form>
+            <div id="can">
+                <a href="/"> <button type="submit" class="btn btn-danger">Cancle</button></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="can">
+        <a href="/admin/menu"> <button type="submit" class="btn btn-danger">after Login</button></a>
+    </div>
+      <img class="logo" src="/images/shehab.jpg" width="200px">
+
+      
+</body>
+</html>
